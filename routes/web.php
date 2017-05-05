@@ -12,6 +12,5 @@
 */
 
 Route::get('/', function () {
-	dd(config('provider'));
     return view('welcome');
 });
