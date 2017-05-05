@@ -21,6 +21,14 @@ class DashServiceProvider extends ServiceProvider
             __DIR__.'/config/idash.php' => config_path('idash.php'),
         ], 'config');
 
+        $this->publishes([
+            __DIR__.'/assets' => public_path('idash'),
+        ], 'public');
+
+        // setting migrations
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
+
+
         
     }
 

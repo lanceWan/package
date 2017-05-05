@@ -12,6 +12,5 @@
 */
 
 Route::get('/', function () {
-	dd(settings('test', '123'));
     return view('welcome');
 });
